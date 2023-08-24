@@ -64,5 +64,6 @@ do
     mv -v $base_file "$(echo $base_file | sed -E 's/[0-9]{0,5}-icon-service-//')"
 done
 
+git add *
 git commit -am "update icons"
 git push
