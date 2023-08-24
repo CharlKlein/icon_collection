@@ -21,6 +21,3 @@ gcp - https://cloud.google.com/static/icons/
 - Folder paths are updated to remove special characters and spaces
 - All Icons Belong to their respective owners and are not owned by me or this repo in any way shape or form.
 - This repo is just for convenience and to have a single place to get all the icons from.
-=======
-Collection of a Vaierty of Icons
->>>>>>> e98162a4bd2623a6fd373f64058a8dc6289e3eba
