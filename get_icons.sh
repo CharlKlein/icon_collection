@@ -4,7 +4,7 @@
 
 rm -rf images
 
-mkdir -p images/gcp images/k8s images/azure images/cncf
+mkdir -p images/gcp images/k8s images/azure images/cncf/projects images/cncf/other
 
 # Download GCP icons
 wget https://cloud.google.com/static/icons/files/google-cloud-icons.zip
@@ -27,7 +27,8 @@ rm -rf community
 
 #download cncf icons
 git clone https://github.com/cncf/artwork.git
-mv artwork/projects/* images/cncf
+mv artwork/projects/* images/cncf/projects
+mv artwork/other/* images/cncf/other
 rm -rf artwork
 
 find images/cncf -type f -name "*.png" -delete
