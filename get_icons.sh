@@ -4,7 +4,7 @@
 
 rm -rf images
 
-mkdir -p images/gcp images/k8s images/azure
+mkdir -p images/gcp images/k8s images/azure images/cncf
 
 # Download GCP icons
 wget https://cloud.google.com/static/icons/files/google-cloud-icons.zip
@@ -25,6 +25,14 @@ git clone https://github.com/kubernetes/community
 mv community/icons/svg/* images/k8s
 rm -rf community
 
+#download cncf icons
+git clone https://github.com/cncf/artwork.git
+mv artwork/projects/* images/cncf
+rm -rf artwork
+
+find images/cncf -type f -name "*.png" -delete
+find images/cncf -type f -name "*.lnk" -delete
+find images/cncf -type f -name "*.pdf" -delete
 
 #download azure icons
 wget  https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V15.zip
@@ -55,3 +63,6 @@ do
     echo $base_file
     mv -v $base_file "$(echo $base_file | sed -E 's/[0-9]{0,5}-icon-service-//')"
 done
+
+git commit -am "update icons"
+git push
